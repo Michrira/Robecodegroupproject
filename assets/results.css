@@ -12,6 +12,7 @@ header {
     border-radius: 10px;
 }
 
+
 p {
     text-align: center;
 }
@@ -25,6 +26,31 @@ p {
 #movieInfo , #showFood {
     background-color: #FFF2CC;
     color: black;
+=======
+#moviePicks {
+    border: 1px dashed;
+    text-align: center; 
+}  
+
+#movieInfo {
+    background-color: #10cad1;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#foodPicks {
+    border: 1px dashed;
+    text-align: center; 
+
+
+}
+
+
+#showFood {
+    background-color: #10cad1;
+    color: #fff;
     cursor: pointer;
     margin: 10px;
     border-radius: 5px;

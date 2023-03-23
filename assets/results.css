@@ -1,7 +1,7 @@
 
 body {
-    background-color: #ffd966;
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #F37335, #FDC830); 
 }
 
 header {

@@ -1,8 +1,8 @@
-var happyBtn = $('#happy-btn');
-var sadBtn = $('#sad-btn');
-var excitedBtn = $('#excited-btn');
-var angryBtn = $('#angry-btn');
-var idkBtn = $('#idk-btn');
+var happyBtn = document.querySelector('#happy-btn');
+var sadBtn = document.querySelector('#sad-btn');
+var excitedBtn = document.querySelector('#excited-btn');
+var angryBtn = document.querySelector('#angry-btn');
+var idkBtn = document.querySelector('#idk-btn');
 
 var happyArray = ["16", "35", "10751", "10770" ];
 var sadArray = ["18", "14", "10402", "10749"];
@@ -11,6 +11,7 @@ var angryArray = ["27", "99", "10752", "80"];
 var idkArray = ["28", "12", "16", "35", "80", "99", "18", "10751", "14", "36", "27", "10402", "9648", "10749", "878", "10770", "53", "10752", "37"];
 
 var requestURL = "https://api.themoviedb.org/3/discover/movie?api_key=7a5e1c0d82259f941772e1baf73aad08&with_original_language=en&with_genres=";
+
 
 if (happyBtn.clicked == true) {
     //randomy pick 1 from happy
@@ -43,8 +44,9 @@ fetch(genreURL)
     .then(function (data) {
       console.log(data)
 
+   // need a randonmized equation to pull random movie 
+for (var i = 0; i < data.length; i++) {
     // where to put items
-
     var title = document.createElement('h3');
     var overview = document.createElement('p');
     var poster = document.createElement()

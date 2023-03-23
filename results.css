@@ -1,3 +1,4 @@
+
 body {
     background-color: #ffd966;
     font-family: 'Poppins', sans-serif;
@@ -11,18 +12,29 @@ header {
     border-radius: 10px;
 }
 
-#movieInfo {
-    background-color: #10cad1;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border-radius: 5px;
+p {
+    text-align: center;
 }
 
-#showFood {
-    background-color: #10cad1;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border-radius: 5px;
+.recs {
+    text-align: center;
+    
+    justify-content: center;
 }
+
+#movieInfo , #showFood {
+    background-color: #FFF2CC;
+    color: black;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 1%;
+    font-size: 30px;
+}
+#movieInfo:hover , #showFood:hover{
+    background-color: #F37335;
+}
+#movieInfo:focus, #showFood:focus {
+    border: 5px solid black;
+}
+

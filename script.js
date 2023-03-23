@@ -101,7 +101,7 @@ locationButton.addEventListener("click", getLocation);
 
 // First movie API, need to replace with my key
 
-var tmdbApiKey = "7a5e1c0d82259f941772e1baf73aad08";
+var tmdbApiKey = "5d63f52510b97ed689fb70d1b4978c73";
 
 fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${tmdbApiKey}`)
 .then(response => response.json())

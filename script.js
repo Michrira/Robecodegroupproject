@@ -103,7 +103,7 @@ locationButton.addEventListener("click", getLocation);
 
 var tmdbApiKey = "5d63f52510b97ed689fb70d1b4978c73";
 
-fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${tmdbApiKey}`)
+fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=$5d63f52510b97ed689fb70d1b4978c73`)
 .then(response => response.json())
 .then(data => {
 console.log(data);
@@ -116,7 +116,7 @@ console.error(error);
 
 const genreId = "10751"; // Replace this with the ID of the genre you want to search for
 
-fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&with_genres=${genreId}`)
+fetch(`https://api.themoviedb.org/3/discover/movie?api_key=$5d63f52510b97ed689fb70d1b4978c73&with_genres=${genreId}`)
 .then(response => response.json())
 .then(data => {
 console.log(data);

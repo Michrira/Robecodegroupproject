@@ -12,3 +12,5 @@ function showFoodOptions(showFoodBtn) {
 }
 
 showFoodBtn.addEventListener("Click", function());
+
+// when the user clicks the 

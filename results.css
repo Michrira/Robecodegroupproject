@@ -16,6 +16,7 @@ header {
     color: #fff;
     cursor: pointer;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 #showFood {
@@ -23,4 +24,5 @@ header {
     color: #fff;
     cursor: pointer;
     margin-bottom: 10px;
+    border-radius: 5px;
 }

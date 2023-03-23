@@ -14,11 +14,12 @@ header {
 }
 
 /* Style the main heading with large text and bold font */
-#topTitle {
+h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 0;
+    text-decoration: underline;
 }
 
 /* Style the subheading with smaller text and lighter font */
@@ -36,6 +37,16 @@ header p {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(202, 11, 154, 0.1);
+}
+button{
+    margin: 5px;
+}
+button:hover {
+    background-color: #F37335;
+
+}
+button:focus {
+    border: 3px solid black;
 }
 
 
@@ -58,7 +69,7 @@ input[type="text"], button {
 /* Style the "Show Me Options" button */
 button {
     background-color: #FFF2CC;
-    color: #black;
+    color: black;
     cursor: pointer;
 }
 

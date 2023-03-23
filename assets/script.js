@@ -3,10 +3,10 @@
 
 /*fetch(requestURL)
 .then(function (response) {
-  return response.json();
+return response.json();
 })
 .then(function (data) {
-  console.log(data)
+console.log(data)
 /* //Bryan's yelp example, need to update with my key when I get it//
 
 fetch("https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=Los%20Angeles&sort_by=best_match&limit=20",{
@@ -72,7 +72,7 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres
 
 // Bryan's Yelp example, need to update with my key when I get it
 
-var yelpApiKey = "HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx";
+/* var yelpApiKey = "HHdD8QKXJrbdHE86msNV_mcpTvQokFr_8FsyCI_oYC_TUVuZiPk2tG-CUYZl6n7Ecl0k8qx_spVixJu9_bX2VYwOO4aiFe3Msre6Jbtkj8lehDFRTxgIld-900gbZHYx";
 
 fetch("https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=Los%20Angeles&sort_by=best_match&limit=20", {
 headers: {
@@ -133,6 +133,52 @@ console.log(data);
 .catch(error => {
 console.error(error);
 });
+ */
+
+ // yelp API ke, Bryan's still need to get mind. 
+var yelpApiKey = "ByTr1g12x5fWKcXeF8ifzkIZt_9MQb-76N6n-DxZyzx66ZudR53Z5Ez2TJ7MBktodnsmcVoiXqBdAing0k7BrGeJRA1yw4vTiwrofTx9m9k3clHgkhg3BV-IMsAcZHYx";
+var tmdbApiKey = "5d63f52510b97ed689fb70d1b4978c73";
+
+var suggestionsContainer = document.querySelector("#suggestions-container");
+var moodButton = document.querySelector("#mood-button");
+moodButton.addEventListener("click", onMoodButtonClick);
+
+function onMoodButtonClick() {
+  // Get the user's mood input here and save it to a variable
+  var mood = "happy"; // for example
+
+  // Call the Yelp API to get food suggestions
+fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=Los%20Angeles&sort_by=best_match&limit=3&term=${mood}`, {
+    headers: {
+    "Authorization": `Bearer ${yelpApiKey}`
+    }
+})
+.then(response => response.json())
+.then(data => {
+    // Display the food suggestions in the suggestions container
+    const foodSuggestions = data.businesses.map(business => business.name);
+    suggestionsContainer.innerHTML += "<h2>Food Suggestions</h2>";
+    suggestionsContainer.innerHTML += `<ul>${foodSuggestions.map(suggestion => `<li>${suggestion}</li>`).join("")}</ul>`;
+})
+.catch(error => {
+    console.error(error);
+});
+
+  // Call the TMDB API to get movie suggestions
+  var genreId = "10751"; // Replace this with the ID of the genre you want to search for
+fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&with_genres=${genreId}`)
+.then(response => response.json())
+.then(data => {
+    // Display the movie suggestions in the suggestions container
+    var movieSuggestions = data.results.slice(0, 3).map(movie => movie.title);
+    suggestionsContainer.innerHTML += "<h2>Movie Suggestions</h2>";
+    suggestionsContainer.innerHTML += `<ul>${movieSuggestions.map(suggestion => `<li>${suggestion}</li>`).join("")}</ul>`;
+})
+.catch(error => {
+    console.error(error);
+});
+}
+
 
 //---------------------------------------
 //Questions

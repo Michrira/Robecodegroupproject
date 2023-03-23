@@ -186,7 +186,8 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&with_ge
 var question = document.querySelector('.question');
 var choices = Array.from(document.querySelectorAll('.choices'));
 var availableQuestions = {};
-
+var currentQuestion = {};
+var MAX_QUESTIONS = 3
 var questionsHappy = [
     {
         question: "Are you Vegan/ Vegetarian?",
@@ -390,6 +391,10 @@ var questionsHappy = [
     }
 ];
 
+var questionIndex = Math.floor(Math.random() * availableQuestions.length);
+currentQuestion = availableQuestions[questionIndex];
+question.innerText = currentQuestion.question;
+
 beginQuestions = () => {
     questionCounter = 0;
     score = 0;
@@ -398,19 +403,22 @@ beginQuestions = () => {
 };
 nextQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
-        return window.location.assign('./end.html');
+        // localStorage.setItem('', );
+        // return window.location.assign('./end.html');
     }}
+   
+// Add event listener for when a choice is clicked
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+    if (!acceptingAnswers) return};
+    })
+
+    // prevents multiple choices from being selected
+    // acceptingAnswers = false;
+    // var selectedChoice = e.target;
+    // var selectedAnswer = selectedChoice.dataset['number'];
+    // var classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+
 
     beginQuestions();
-
-
-
-
-
-//yelp api
-
-curl --request GET \
-     --url 'https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20' \
-     --header 'accept: application/json'
-

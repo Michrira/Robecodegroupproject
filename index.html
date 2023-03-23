@@ -8,25 +8,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
-
     <link rel="stylesheet" type="text/css" href="style.css" />
 
     <title>FLIX & Feasts</title>
-       
+    
 </head>
 <body>
- 
- <header>
+
+<header>
     <h1 id=" topTitle"> FLIX & Feasts </h1>
         <p> 
         Indecisive? Look no further! ...........
         </p>
- </header>   
- 
- <div class = moodQs>
-A few questions about your mood: 
-   
+</header>   
+
+<div class = moodQs>
+    <h2> What's your mood today?</h2>
+<button id = "happy-btn">happy</button>
+<button id = "sad-btn">sad</button>
+<button id = "excited-btn">excited</button>
+<button id = "angry-btn">angry</button>
+<button id = "idk-btn">idk</button>
+
 </div>
 
 
@@ -35,7 +38,7 @@ What type of food are you feeling?
 
 </div>
 
-<div class = movieResults
+<div class = movieResults> 
 <button id="aboutMovieBtn"> About Movie</button> 
 </div>
 
@@ -45,13 +48,11 @@ What type of food are you feeling?
 
 
 
- <p>Find food in near you!</p>
+<p>Find food in near you!</p>
 
- <button onclick="getLocation()">Show Me Options</button>
- 
- <p id="location"></p>
- 
+<button onclick="getLocation()">Show Me Options</button>
 
+<p id="location"></p>
 
 
 
@@ -59,7 +60,9 @@ What type of food are you feeling?
 
 
 
- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
 
 <script src="script.js"></script>
     

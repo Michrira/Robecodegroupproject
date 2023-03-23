@@ -1,23 +1,25 @@
 /* Set the background color and font family for the entire page */
 body {
-    background-color: #FFD966;
+background: linear-gradient(to bottom, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     font-family: 'Poppins', sans-serif;
 }
 
 /* Style the header with a dark background, white text, and centered content */
 header {
     background-color: #DFA67B;
-    color: #black;
+    color: black;
     text-align: center;
     padding: 20px;
 }
 
 /* Style the main heading with large text and bold font */
-#topTitle {
+h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 0;
+    text-decoration: underline;
 }
 
 /* Style the subheading with smaller text and lighter font */
@@ -36,6 +38,17 @@ header p {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(202, 11, 154, 0.1);
 }
+button{
+    margin: 5px;
+}
+button:hover {
+    background-color: #F37335;
+
+}
+button:focus {
+    border: 3px solid black;
+}
+
 
 /* Style the questions text with larger font and bold font */
 .moodQs h2, .foodQs h2 {
@@ -56,7 +69,7 @@ input[type="text"], button {
 /* Style the "Show Me Options" button */
 button {
     background-color: #FFF2CC;
-    color: #black;
+    color: black;
     cursor: pointer;
 }
 

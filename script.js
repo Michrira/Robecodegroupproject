@@ -1,3 +1,12 @@
+
+
+
+/*fetch(requestURL)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  console.log(data)
 /* //Bryan's yelp example, need to update with my key when I get it//
 
 fetch("https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=Los%20Angeles&sort_by=best_match&limit=20",{

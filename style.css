@@ -1,3 +1,98 @@
+/* Set the background color and font family for the entire page */
+body {
+    background-color: #FFD966;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style the header with a dark background, white text, and centered content */
+header {
+    background-color: #DFA67B;
+    color: #black;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the main heading with large text and bold font */
 #topTitle {
     font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Style the subheading with smaller text and lighter font */
+header p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+/* Style the questions div with a light background and centered text */
+.moodQs, .foodQs {
+    background-color: #F4B183;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(202, 11, 154, 0.1);
+}
+
+/* Style the questions text with larger font and bold font */
+.moodQs h2, .foodQs h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* Style the input fields and buttons */
+input[type="text"], button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+/* Style the "Show Me Options" button */
+button {
+    background-color: #FFF2CC;
+    color: #black;
+    cursor: pointer;
+}
+
+/* Style the movie results div */
+.movieResults {
+    background-color: #08bec8;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 0.1);
+    display: none;
+}
+
+/* Style the "About Movie" button */
+#aboutMovieBtn {
+    background-color: #10cad1;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Style the food results div */
+.foodResults {
+    background-color: #0e89b1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(74, 67, 111, 0.9);
+    display: none;
+}
+
+/* Style the "Find food in near you!" text */
+p {
+    background-color: #FFF2CC;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
 }

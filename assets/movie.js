@@ -3,6 +3,7 @@ var sadBtn = document.querySelector("#sad-btn");
 var excitedBtn = document.querySelector("#excited-btn");
 var angryBtn = document.querySelector("#angry-btn");
 var idkBtn = document.querySelector("#idk-btn");
+var questionContainer = document.getElementById("food-container");
 
 var happyArray = ["16", "35", "10751", "10770"];
 var sadArray = ["18", "14", "10402", "10749"];
@@ -51,14 +52,13 @@ function shuffle(array) {
 // Function to display a random question
 function displayRandomQuestion(question) {
   // Display the random question on the page
-  var questionContainer = document.getElementById("food-container");
   questionContainer.innerHTML += `<h2>${question.question}</h2>
     <select id="food-selection">
         <option value="${question.choice1}">${question.choice1}</option>
         <option value="${question.choice2}">${question.choice2}</option>
         <option value="${question.choice3}">${question.choice3}</option>
-
-    <button id="get-food-btn">Get food suggestions</button>`;
+    </select>
+    `;
 }
 
 function clickedButton(event) {
@@ -66,7 +66,9 @@ function clickedButton(event) {
 
   var element = event.target;
   if (element.matches("button")) {
-    var buttonType = element.getAttribute("id");
+      var buttonType = element.getAttribute("id");
+      
+      questionContainer.innerHTML = '';
 
     if (buttonType === "happy-btn") {
       shuffle(questionsHappy);

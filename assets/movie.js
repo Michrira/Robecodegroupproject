@@ -17,6 +17,7 @@ var requestURL = "https://api.themoviedb.org/3/discover/movie?api_key=7a5e1c0d82
 
 var moodBtns = document.querySelector('#mood-selection');
 console.log(moodBtns)
+
 moodBtns.addEventListener('click', clickedButton)
 
 function clickedButton(event) {

@@ -1,10 +1,5 @@
+// 32
 var questionsIdk = [
-  {
-    question: "Are you Vegan/ Vegetarian?",
-    choice1: "Yes",
-    choice2: "No",
-    choice3: "I dont know",
-  },
   {
     question: "Do you want something sweet?",
     choice1: "Yes",
@@ -198,6 +193,8 @@ var questionsIdk = [
     choice3: "I dont know",
   },
 ];
+
+// 9
 var questionsHappy = [
   {
     question: "Do you want something sweet?",
@@ -255,6 +252,7 @@ var questionsHappy = [
   },
 ];
 
+// 8
 var questionsSad = [
   {
     question: "Would you like dessert?",
@@ -305,6 +303,8 @@ var questionsSad = [
     choice3: "I dont know",
   },
 ];
+
+// 9
 var questionsAngry = [
   {
     question: "Do you want a hearty meal?",
@@ -362,6 +362,7 @@ var questionsAngry = [
   },
 ];
 
+// 8
 var questionsExcited = [
   {
     question: "Do you want carbs?",
@@ -412,3 +413,10 @@ var questionsExcited = [
     choice3: "I dont know",
   },
 ];
+
+var questionVegan = {
+  question: "Are you Vegan/ Vegetarian?",
+  choice1: "Yes",
+  choice2: "No",
+  choice3: "I dont know",
+}

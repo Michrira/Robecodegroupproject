@@ -38,41 +38,25 @@ var requestURL =
 
 var availableQuestions = {};
 var currentQuestion = {};
-var MAX_QUESTIONS = 3;
+var MAX_QUESTIONS = 2;
 
 // Shuffle function
 function shuffle(array) {
-    var currentIndex = array.length;
-    
-    console.log(currentIndex)
-
-  // While there remain elements to shuffle
-  while (currentIndex !== 0) {
-    // Pick a remaining element
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
+    for (var count = 0; count < MAX_QUESTIONS; count++) {
+        randomItem = array[Math.floor(Math.random() * array.length)];
+        displayRandomQuestion(randomItem);
+    }
 }
 
 // Function to display a random question
-function displayRandomQuestion(shuffledQuestions) {
-  var randomIndex = Math.floor(Math.random() * shuffledQuestions.length);
-  var randomQuestion = shuffledQuestions[randomIndex];
-  console.log(randomQuestion);
+function displayRandomQuestion(question) {
   // Display the random question on the page
   var questionContainer = document.getElementById("food-container");
-  questionContainer.innerHTML += `<h2>${randomQuestion.question}</h2>
+  questionContainer.innerHTML += `<h2>${question.question}</h2>
     <select id="food-selection">
-        <option value="${randomQuestion.choice1}">${randomQuestion.choice1}</option>
-        <option value="${randomQuestion.choice2}">${randomQuestion.choice2}</option>
-        <option value="${randomQuestion.choice3}">${randomQuestion.choice3}</option>
+        <option value="${question.choice1}">${question.choice1}</option>
+        <option value="${question.choice2}">${question.choice2}</option>
+        <option value="${question.choice3}">${question.choice3}</option>
 
     <button id="get-food-btn">Get food suggestions</button>`;
 }
@@ -85,47 +69,44 @@ function clickedButton(event) {
     var buttonType = element.getAttribute("id");
 
     if (buttonType === "happy-btn") {
+      shuffle(questionsHappy);
       //randomy pick 1 from happy
-      randomItem = happyArray[Math.floor(Math.random() * happyArray.length)];
-      genreURl = requestURL.concat(randomItem);
-      var shuffledQuestions = shuffle(questionsHappy);
-      console.log(shuffledQuestions);
-      displayRandomQuestion(shuffledQuestions);
-      displayRandomQuestion(shuffledQuestions);
+      //   randomItem = happyArray[Math.floor(Math.random() * happyArray.length)];
+      //   genreURl = requestURL.concat(randomItem);
     }
-//     else if (buttonType === "sad-btn") {
-//       //randomy pick 1 from sad
-//       randomItem = sadArray[Math.floor(Math.random() * sadArray.length)];
-//       genreURl = requestURL.concat(randomItem);
-//       var shuffledQuestions = shuffle(questionsSad);
-//       console.log(shuffledQuestions);
-//       displayRandomQuestion(shuffledQuestions);
-//       displayRandomQuestion(shuffledQuestions);
-//     } else if (buttonType === "excited-btn") {
-//       //randomy pick 1 from excited
-//       randomItem =
-//         excitedArray[Math.floor(Math.random() * excitedArray.length)];
-//       genreURl = requestURL.concat(randomItem);
-//       var shuffledQuestions = shuffle(questionsExcited);
-//       console.log(shuffledQuestions);
-//       displayRandomQuestion(shuffledQuestions);
-//       displayRandomQuestion(shuffledQuestions);
-//     } else if (buttonType === "angry-btn") {
-//       //randomy pick 1 from happy
-//       randomItem = angryArray[Math.floor(Math.random() * angryArray.length)];
-//       genreURl = requestURL.concat(randomItem);
-//       var shuffledQuestions = shuffle(questionsAngry);
-//       console.log(shuffledQuestions);
-//       displayRandomQuestion(shuffledQuestions);
-//       displayRandomQuestion(shuffledQuestions);
-//     } else buttonType === "Idk-btn";
-//     //randomy pick 1 from idk
-//     randomItem = idkArray[Math.floor(Math.random() * idkArray.length)];
-//     genreURl = requestURL.concat(randomItem);
-//     var shuffledQuestions = shuffle(questionsIdk);
-//     console.log(shuffledQuestions);
-//     displayRandomQuestion(shuffledQuestions);
-//     displayRandomQuestion(shuffledQuestions);
+    //     else if (buttonType === "sad-btn") {
+    //       //randomy pick 1 from sad
+    //       randomItem = sadArray[Math.floor(Math.random() * sadArray.length)];
+    //       genreURl = requestURL.concat(randomItem);
+    //       var shuffledQuestions = shuffle(questionsSad);
+    //       console.log(shuffledQuestions);
+    //       displayRandomQuestion(shuffledQuestions);
+    //       displayRandomQuestion(shuffledQuestions);
+    //     } else if (buttonType === "excited-btn") {
+    //       //randomy pick 1 from excited
+    //       randomItem =
+    //         excitedArray[Math.floor(Math.random() * excitedArray.length)];
+    //       genreURl = requestURL.concat(randomItem);
+    //       var shuffledQuestions = shuffle(questionsExcited);
+    //       console.log(shuffledQuestions);
+    //       displayRandomQuestion(shuffledQuestions);
+    //       displayRandomQuestion(shuffledQuestions);
+    //     } else if (buttonType === "angry-btn") {
+    //       //randomy pick 1 from happy
+    //       randomItem = angryArray[Math.floor(Math.random() * angryArray.length)];
+    //       genreURl = requestURL.concat(randomItem);
+    //       var shuffledQuestions = shuffle(questionsAngry);
+    //       console.log(shuffledQuestions);
+    //       displayRandomQuestion(shuffledQuestions);
+    //       displayRandomQuestion(shuffledQuestions);
+    //     } else buttonType === "Idk-btn";
+    //     //randomy pick 1 from idk
+    //     randomItem = idkArray[Math.floor(Math.random() * idkArray.length)];
+    //     genreURl = requestURL.concat(randomItem);
+    //     var shuffledQuestions = shuffle(questionsIdk);
+    //     console.log(shuffledQuestions);
+    //     displayRandomQuestion(shuffledQuestions);
+    //     displayRandomQuestion(shuffledQuestions);
   }
   getMovieURl();
 }

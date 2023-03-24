@@ -3,8 +3,9 @@ var yelpApiKey = "ByTr1g12x5fWKcXeF8ifzkIZt_9MQb-76N6n-DxZyzx66ZudR53Z5Ez2TJ7MBk
 var tmdbApiKey = "5d63f52510b97ed689fb70d1b4978c73";
 
 var suggestionsContainer = document.querySelector("#suggestions-container");
-var moodButton = document.querySelector("#mood-button");
-moodButton.addEventListener("click", onMoodButtonClick);
+var moodBtns = document.querySelector("#mood-selection");
+// var moodButton = document.querySelector("#mood-button");
+// moodButton.addEventListener("click", onMoodButtonClick);
 
 function onMoodButtonClick() {
   // Get the user's mood input here and save it to a variable
@@ -64,8 +65,8 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&with_ge
 }
 
   // Call the displayRandomQuestion function when the user selects their mood
-var moodSelector = document.getElementById("mood-selector");
-moodSelector.addEventListener("change", displayRandomQuestion);
+// var moodSelector = document.getElementById("mood-selector");
+// moodSelector.addEventListener("change", displayRandomQuestion);
 
 
 /* var questionIndex = Math.floor(Math.random() * availableQuestions.length);

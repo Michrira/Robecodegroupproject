@@ -6,12 +6,12 @@ body {
 
 header {
     background-color: #DFA67B;
-    color: whitesmoke;
+    color: #FF0000;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
+    
 }
-
 
 p {
     text-align: center;

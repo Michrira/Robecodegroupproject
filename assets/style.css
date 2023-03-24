@@ -24,6 +24,11 @@ h1 {
     color: #FF0000;
 }
 
+h2 {
+    font-family:cursive; 
+    color: orangered;
+}
+
 .feasts {
     font-family: 'Caveat', cursive;
 }

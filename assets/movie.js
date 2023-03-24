@@ -23,6 +23,7 @@ var choices = Array.from(document.querySelectorAll('.choices'));
 var availableQuestions = {};
 var currentQuestion = {};
 var MAX_QUESTIONS = 3
+
 var questionsIdk = [
     {
         question: "Are you Vegan/ Vegetarian?",
@@ -446,7 +447,6 @@ function displayRandomQuestion(shuffledQuestions) {
     <button id="get-food-btn">Get food suggestions</button>`;
 }
 
-
 moodBtns.addEventListener('click', clickedButton)
 
 function clickedButton(event) {
@@ -496,7 +496,7 @@ function clickedButton(event) {
            //randomy pick 1 from idk
             randomItem = idkArray[Math.floor(Math.random() * idkArray.length)];
             genreURl = requestURL.concat(randomItem);
-            var shuffledQuestions = shuffle(questionsIdontknow);
+            var shuffledQuestions = shuffle(questionsIdk);
             console.log(shuffledQuestions);
             displayRandomQuestion(shuffledQuestions); 
             displayRandomQuestion(shuffledQuestions); 

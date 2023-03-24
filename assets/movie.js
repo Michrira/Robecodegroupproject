@@ -5,6 +5,8 @@ var angryBtn = document.querySelector("#angry-btn");
 var idkBtn = document.querySelector("#idk-btn");
 var questionContainer = document.getElementById("food-container");
 
+var questions;
+
 var happyArray = ["16", "35", "10751", "10770"];
 var sadArray = ["18", "14", "10402", "10749"];
 var excitedArray = ["28", "12", "53", "9648"];
@@ -43,16 +45,27 @@ var MAX_QUESTIONS = 2;
 
 // Shuffle function
 function shuffle(array) {
+    questions = '';
   for (var count = 0; count < MAX_QUESTIONS; count++) {
     randomItem = array[Math.floor(Math.random() * array.length)];
     displayRandomQuestion(randomItem);
   }
+    questionContainer.innerHTML =
+      `<h2>Are you Vegan/ Vegetarian?</h2>
+    <select id="food-selection">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="I dont know">I dont know</option>
+    </select>
+    ` +
+      questions +
+      `</br><button id="get-food-btn">Get food suggestions</button>`;
 }
 
 // Function to display a random question
 function displayRandomQuestion(question) {
   // Display the random question on the page
-  questionContainer.innerHTML += `<h2>${question.question}</h2>
+  questions += `<h2>${question.question}</h2>
     <select id="food-selection">
         <option value="${question.choice1}">${question.choice1}</option>
         <option value="${question.choice2}">${question.choice2}</option>
@@ -62,13 +75,14 @@ function displayRandomQuestion(question) {
 }
 
 function clickedButton(event) {
-  event.preventDefault();
+    event.preventDefault();
 
   var element = event.target;
   if (element.matches("button")) {
-      var buttonType = element.getAttribute("id");
+    var buttonType = element.getAttribute("id");
+
+      questionContainer.innerHTML = "";
       
-      questionContainer.innerHTML = '';
 
     if (buttonType === "happy-btn") {
       shuffle(questionsHappy);
@@ -89,6 +103,7 @@ function clickedButton(event) {
       shuffle(questionsIdk);
     }
   }
+
   getMovieURl();
 }
 

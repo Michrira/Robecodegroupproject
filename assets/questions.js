@@ -413,10 +413,3 @@ var questionsExcited = [
     choice3: "I dont know",
   },
 ];
-
-var questionVegan = {
-  question: "Are you Vegan/ Vegetarian?",
-  choice1: "Yes",
-  choice2: "No",
-  choice3: "I dont know",
-}

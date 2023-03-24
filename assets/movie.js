@@ -42,10 +42,10 @@ var MAX_QUESTIONS = 2;
 
 // Shuffle function
 function shuffle(array) {
-    for (var count = 0; count < MAX_QUESTIONS; count++) {
-        randomItem = array[Math.floor(Math.random() * array.length)];
-        displayRandomQuestion(randomItem);
-    }
+  for (var count = 0; count < MAX_QUESTIONS; count++) {
+    randomItem = array[Math.floor(Math.random() * array.length)];
+    displayRandomQuestion(randomItem);
+  }
 }
 
 // Function to display a random question
@@ -74,39 +74,18 @@ function clickedButton(event) {
       //   randomItem = happyArray[Math.floor(Math.random() * happyArray.length)];
       //   genreURl = requestURL.concat(randomItem);
     }
-    //     else if (buttonType === "sad-btn") {
-    //       //randomy pick 1 from sad
-    //       randomItem = sadArray[Math.floor(Math.random() * sadArray.length)];
-    //       genreURl = requestURL.concat(randomItem);
-    //       var shuffledQuestions = shuffle(questionsSad);
-    //       console.log(shuffledQuestions);
-    //       displayRandomQuestion(shuffledQuestions);
-    //       displayRandomQuestion(shuffledQuestions);
-    //     } else if (buttonType === "excited-btn") {
-    //       //randomy pick 1 from excited
-    //       randomItem =
-    //         excitedArray[Math.floor(Math.random() * excitedArray.length)];
-    //       genreURl = requestURL.concat(randomItem);
-    //       var shuffledQuestions = shuffle(questionsExcited);
-    //       console.log(shuffledQuestions);
-    //       displayRandomQuestion(shuffledQuestions);
-    //       displayRandomQuestion(shuffledQuestions);
-    //     } else if (buttonType === "angry-btn") {
-    //       //randomy pick 1 from happy
-    //       randomItem = angryArray[Math.floor(Math.random() * angryArray.length)];
-    //       genreURl = requestURL.concat(randomItem);
-    //       var shuffledQuestions = shuffle(questionsAngry);
-    //       console.log(shuffledQuestions);
-    //       displayRandomQuestion(shuffledQuestions);
-    //       displayRandomQuestion(shuffledQuestions);
-    //     } else buttonType === "Idk-btn";
-    //     //randomy pick 1 from idk
-    //     randomItem = idkArray[Math.floor(Math.random() * idkArray.length)];
-    //     genreURl = requestURL.concat(randomItem);
-    //     var shuffledQuestions = shuffle(questionsIdk);
-    //     console.log(shuffledQuestions);
-    //     displayRandomQuestion(shuffledQuestions);
-    //     displayRandomQuestion(shuffledQuestions);
+    if (buttonType === "sad-btn") {
+      shuffle(questionsSad);
+    }
+    if (buttonType === "excited-btn") {
+      shuffle(questionsExcited);
+    }
+    if (buttonType === "angry-btn") {
+      shuffle(questionsAngry);
+    }
+    if (buttonType === "idk-btn") {
+      shuffle(questionsIdk);
+    }
   }
   getMovieURl();
 }

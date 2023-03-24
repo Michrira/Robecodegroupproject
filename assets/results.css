@@ -10,57 +10,84 @@ header {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     
+
 }
 
 p {
     text-align: center;
+    font-size: 35px;
 }
 
 .recs {
     text-align: center;
-    
+    font-size: 25px;
     justify-content: center;
 }
-
-#movieInfo , #showFood {
-    background-color: #FFF2CC;
-    color: black;
-=======
-#moviePicks {
-    border: 1px dashed;
-    text-align: center; 
-}  
-
-#movieInfo {
-    background-color: #10cad1;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border-radius: 5px;
+.movie-placeholder, .food-placeholder {
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-#foodPicks {
-    border: 1px dashed;
-    text-align: center; 
-
-
+.synopsis, .food-options {
+    border-radius: 10px;
+    max-width: 50%;
+    border: 3px solid black;
+    text-align: center;
+    margin: auto;
+    color: white;
+    margin-top: 2%;
+    
+}
+.emoji {
+    font-size: calc(90px + 3vw);
+    min-width: 1.4em;
+    margin: 0.3em 0.4em;
+    text-align: center;
 }
 
+.emoji::after {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.monkey::after {
+    content: '🙈';
+    --emoji-1: '🙉';
+    --emoji-2: '🙊';
+    animation-name: threeFrames;
+    animation-duration: 2s;
+}
+.food::after {
+    content: '🍔';
+    --emoji-1: '🥡';
+    --emoji-2: '🥗';
+    animation-name: threeFrames;
+    animation-duration: 2s;
+}
 
-#showFood {
-    background-color: #10cad1;
-    color: #fff;
-    cursor: pointer;
-    margin: 10px;
-    border-radius: 5px;
-    padding: 1%;
-    font-size: 30px;
+.star-face::after {
+    content: '🤩 ';
+    --emoji: '😄';
+    animation-name: twoFrames;
+    animation-duration: 1.5s;
 }
-#movieInfo:hover , #showFood:hover{
-    background-color: #F37335;
+
+@keyframes twoFrames {
+    50% {
+        content: var(--emoji);
+    }
 }
-#movieInfo:focus, #showFood:focus {
-    border: 5px solid black;
+@keyframes threeFrames {
+    33.333% {
+        content: var(--emoji-1);
+    }
+
+    66.666% {
+        content: var(--emoji-2);
+    }
 }
 

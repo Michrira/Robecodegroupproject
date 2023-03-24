@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-    
-    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+
     <link rel="results stylesheet" type="text/css" href="./assets/results.css"/>
 
     <title>Your Results</title>
@@ -17,9 +18,13 @@
 <body>
     
     <header>
-        <h1> 
-            🍕🌮🍝🍔🥡🥗 YOUR RESULTS! 📣🎬🎥🎞📺🍿 
-        </h1>
+
+        <span class="emoji monkey" role="img" aria-label="monkey"></span>
+        <h1> YOUR RESULTS! </h1>
+        <span class="emoji monkey" role="img" aria-label="monkey"></span>
+        <span class="emoji star-face" role="img"></span>
+        <span class="emoji food" role="img"></span>
+
     </header>
 <main>
     <p>
@@ -28,19 +33,15 @@
 
 <div class="recs">
     <container class = moviePicks>
-        <div>placeholder </div>
-        <button id = "movieInfo">About Movie</button>
+        <div class="movie-placeholder">MOVIE RESULT PLACEHOLDER TEXT</div>
+        <button class="huge ui button">Movie Synopsis</button>
+        <p class="synopsis"> This is the movie synopsis</p>
+    
     </container>
     <container class = foodPicks>
-        <div> placeholder</div>
-
-
-    <container id = moviePicks> MOVIE RESULT PLACEHOLDER TEXT </container>
-        <button id = "movieInfo">Movie Synopsis</button>
-
-    <container id = foodPicks> FOOD RESULT PLACEHOLDER TEXT</container>
-
-        <button id = "showFood">Show me Options</button>
+        <div class="food-placeholder"> FOOD RESULT PLACEHOLDER TEXT</div>
+        <button class="huge ui button">Show me Options</button>
+        <p class="food-options"> this is the food options </p>
     </container>
 </div>
  </main>

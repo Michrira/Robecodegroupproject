@@ -2,33 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@700&display=swap"
+        rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
 
     <title>FLIX & Feasts</title>
-
-</head> 
+</head>
 
 <body>
-
     <header>
-        <h1> 🎬 FLIX & <span class = feasts> Feasts </span> 🍿</h1>
-        <p>
-            Indecisive? Look no further! 
-        </p>
+        <h1>🎬 FLIX &amp; <span class="feasts">Feasts</span> 🍿</h1>
+        <p>Indecisive? Look no further!</p>
     </header>
 
-    <div class=moodQs>
-        <h2> What's your mood today?</h2>
+    <div class="moodQs">
+        <h2>What's your mood today?</h2>
         <div id="mood-selection">
             <button id="happy-btn">happy 😄</button>
             <button id="sad-btn">sad 😔</button>
@@ -36,48 +33,35 @@
             <button id="angry-btn">angry 😡</button>
             <button id="idk-btn">idk 🙃</button>
         </div>
-   </div>
-
-
-    <div class=foodQs>
-        What type of food are you feeling?
-
     </div>
 
-    <div class=movieResults>
-        <!-- <button id="aboutMovieBtn"> About Movie</button>  -->
+    <div class="foodQs">
+        <h2>What type of food are you feeling?</h2>
+        <select id="food-selection">
+            <option value="american">American</option>
+            <option value="chinese">Chinese</option>
+            <option value="italian">Italian</option>
+            <option value="japanese">Japanese</option>
+            <option value="mexican">Mexican</option>
+        </select>
+        <button id="get-food-btn">Get food suggestions</button>
     </div>
 
-
-    <div class=foodResults>
+    <div class="movieResults">
+        <h2>Movie suggestions</h2>
+        <ul id="movie-list"></ul>
     </div>
 
+    <div class="foodResults">
+        <h2>Food suggestions</h2>
+        <ul id="food-list"></ul>
+    </div>
 
-
-    <!-- <p>Find food in near you!</p> -->
-
-
-    <!-- <button onclick="getLocation()">Show Me Options</button> -->
-
-<!-- <p>Find food near you!</p> -->
-
-
-    <!-- <p id="location"></p> -->
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
-    <script src="./assets/my.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/script.js"></script>
 
-</body>
+    <script src="assets/movie.js"></script>
 
+</body>
 
 </html>

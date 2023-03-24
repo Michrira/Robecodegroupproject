@@ -12,8 +12,9 @@ fetch('https://api.yelp.com/v3/businesses/search?categories=&categories=restaura
   .catch(err => console.error(err));
 
 var suggestionsContainer = document.querySelector("#suggestions-container");
-var moodButton = document.querySelector("#mood-button");
-moodButton.addEventListener("click", onMoodButtonClick);
+var moodBtns = document.querySelector("#mood-selection");
+// var moodButton = document.querySelector("#mood-button");
+// moodButton.addEventListener("click", onMoodButtonClick);
 
 function onMoodButtonClick() {
   // Get the user's mood input here and save it to a variable
@@ -73,8 +74,8 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&with_ge
 }
 
   // Call the displayRandomQuestion function when the user selects their mood
-var moodSelector = document.getElementById("mood-selector");
-moodSelector.addEventListener("change", displayRandomQuestion);
+// var moodSelector = document.getElementById("mood-selector");
+// moodSelector.addEventListener("change", displayRandomQuestion);
 
 
 /* var questionIndex = Math.floor(Math.random() * availableQuestions.length);

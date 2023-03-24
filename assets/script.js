@@ -76,3 +76,34 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&with_ge
 var moodSelector = document.getElementById("mood-selector");
 moodSelector.addEventListener("change", displayRandomQuestion);
 
+
+/* var questionIndex = Math.floor(Math.random() * availableQuestions.length);
+currentQuestion = availableQuestions[questionIndex];
+question.innerText = currentQuestion.question;
+
+beginQuestions = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    nextQuestion();
+};
+nextQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+        // localStorage.setItem('', );
+        // return window.location.assign('./end.html');
+    }}
+
+// Add event listener for when a choice is clicked
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+    if (!acceptingAnswers) return};
+    })
+
+    // prevents multiple choices from being selected
+    // acceptingAnswers = false;
+    // var selectedChoice = e.target;
+    // var selectedAnswer = selectedChoice.dataset['number'];
+    // var classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+    beginQuestions();
+ */

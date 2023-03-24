@@ -14,3 +14,14 @@ function showFoodOptions(showFoodBtn) {
 showFoodBtn.addEventListener("click", showFoodOptions);
 
 // when the user clicks the "Show Me Options" button under food results, they are taken top the yelp page 
+
+var movie = document.querySelector("movie-placeholder");
+var btn = document.querySelector("button")
+
+btn.onclick=function() {
+    if (movie.style.display=="none") {
+        movie.style.display== "block"
+    } else {
+        movie.style.display=="none"
+    }
+}

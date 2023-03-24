@@ -20,30 +20,26 @@ function clickedButton(event) {
     event.preventDefault();
     console.log(event.target)
 
-
-
     var element=event.target
     if (element.matches("button")){
         var buttonType = element.getAttribute("id")
         console.log(buttonType)
-    
-
 
 if (buttonType==="happy-btn") {
     //randomy pick 1 from happy
     var randomItem = happyArray[Math.floor(Math.random()*happyArray.length)];
     var genreURl= requestURL.concat(randomItem);
 }
-else if (sadBtn is clicked) {
+else if (buttonType==="sad-btn") {
     //randomy pick 1 from sad
     var randomItem = sadArray[Math.floor(Math.random()*sadArray.length)];
     var genreURl= requestURL.concat(randomItem);
 }
-else if (excitedBtn is clicked){
+else if (buttonType==="excited-btn"){
     //randomy pick 1 from excited
     var randomItem = excitedArray[Math.floor(Math.random()*excitedArray.length)];
     var genreURl= requestURL.concat(randomItem);
-} else if (angryBtn is clicked) {
+} else if (buttonType==="angry-btn") {
     //randomy pick 1 from happy
     var randomItem = angryArray[Math.floor(Math.random()*angryArray.length)];
     var genreURl= requestURL.concat(randomItem);
@@ -54,7 +50,7 @@ else if (excitedBtn is clicked){
 } 
     }}
 function genreURl() {
-fetch(genreURL)
+fetch(genreURl)
     .then(function (response) {
       return response.json();
     })

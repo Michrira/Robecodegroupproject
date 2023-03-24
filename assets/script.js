@@ -2,6 +2,15 @@
 var yelpApiKey = "ByTr1g12x5fWKcXeF8ifzkIZt_9MQb-76N6n-DxZyzx66ZudR53Z5Ez2TJ7MBktodnsmcVoiXqBdAing0k7BrGeJRA1yw4vTiwrofTx9m9k3clHgkhg3BV-IMsAcZHYx";
 var tmdbApiKey = "5d63f52510b97ed689fb70d1b4978c73";
 
+//restaurants API
+
+const options = {method: 'GET', headers: {accept: 'application/json'}};
+
+fetch('https://api.yelp.com/v3/businesses/search?categories=&categories=restaurants&sort_by=best_match&limit=20', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
 var suggestionsContainer = document.querySelector("#suggestions-container");
 var moodButton = document.querySelector("#mood-button");
 moodButton.addEventListener("click", onMoodButtonClick);
@@ -67,34 +76,3 @@ fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&with_ge
 var moodSelector = document.getElementById("mood-selector");
 moodSelector.addEventListener("change", displayRandomQuestion);
 
-
-/* var questionIndex = Math.floor(Math.random() * availableQuestions.length);
-currentQuestion = availableQuestions[questionIndex];
-question.innerText = currentQuestion.question;
-
-beginQuestions = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    nextQuestion();
-};
-nextQuestion = () => {
-    if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        // localStorage.setItem('', );
-        // return window.location.assign('./end.html');
-    }}
-
-// Add event listener for when a choice is clicked
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-    if (!acceptingAnswers) return};
-    })
-
-    // prevents multiple choices from being selected
-    // acceptingAnswers = false;
-    // var selectedChoice = e.target;
-    // var selectedAnswer = selectedChoice.dataset['number'];
-    // var classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-
-    beginQuestions();
- */

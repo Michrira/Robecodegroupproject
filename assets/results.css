@@ -91,3 +91,20 @@ p {
     }
 }
 
+/* remove color changing background in final product */
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    background-color: orange;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  * {
+    background-color: yellow;
+  }
+}

@@ -73,6 +73,11 @@ function displayRandomQuestion(question) {
     `;
 }
 
+function getRandomMovie(array) {
+  randomItem = array[Math.floor(Math.random() * array.length)];
+  genreURl = requestURL.concat(randomItem);
+}
+
 function clickedButton(event) {
   event.preventDefault();
 
@@ -84,21 +89,23 @@ function clickedButton(event) {
 
     if (buttonType === 'happy-btn') {
       shuffle(questionsHappy);
-      //randomy pick 1 from happy
-      //   randomItem = happyArray[Math.floor(Math.random() * happyArray.length)];
-      //   genreURl = requestURL.concat(randomItem);
+      getRandomMovie(questionsHappy);
     }
     if (buttonType === 'sad-btn') {
       shuffle(questionsSad);
+      getRandomMovie(questionsSad);
     }
     if (buttonType === 'excited-btn') {
       shuffle(questionsExcited);
+      getRandomMovie(questionsExcited);
     }
     if (buttonType === 'angry-btn') {
       shuffle(questionsAngry);
+      getRandomMovie(questionsAngry);
     }
     if (buttonType === 'idk-btn') {
       shuffle(questionsIdk);
+      getRandomMovie(questionsIdk);
     }
   }
 
@@ -113,7 +120,7 @@ function getMovieURl() {
     .then(function (data) {
       console.log(data);
       var movieArray = data.results;
-      console.log(movieArray);
+      // console.log(movieArray);
       var randomMovie =
         movieArray[Math.floor(Math.random() * movieArray.length)];
       localStorage.setItem('random-movie', JSON.stringify(randomMovie));

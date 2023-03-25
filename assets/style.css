@@ -16,18 +16,38 @@ header {
 /* Style the main heading with large text and bold font */
 h1 {
     font-family: 'Poppins', sans-serif;
+    font-size: 90px;
     color: #FF0000;
     font-size: 48px;
-    font-weight: bold;
+    font-weight: 700px;
     margin-bottom: 0;
     text-decoration: underline;
-    color: #FF0000;
 }
 
 h2 {
-    font-family:cursive; 
-    color: orangered;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    
+    
 }
+
+#moodToday {
+    font-family: 'Caveat', cursive;
+    font-size: 50px ;
+    color: black;
+    font-weight: bolder;
+    text-decoration: underline red;
+}
+
+#foodFeels {
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: underline red;
+}
+
+
 
 .feasts {
     font-family: 'Caveat', cursive;

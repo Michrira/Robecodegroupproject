@@ -24,12 +24,29 @@ h1 {
 }
 
 h2 {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    
+    
+}
+
+#moodToday {
     font-family: 'Caveat', cursive;
+    font-size: 50px ;
     color: black;
     font-weight: bolder;
     text-decoration: underline red;
-    
 }
+
+#foodFeels {
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    color: black;
+    font-weight: bolder;
+    text-decoration: underline red;
+}
+
+
 
 .feasts {
     font-family: 'Caveat', cursive;

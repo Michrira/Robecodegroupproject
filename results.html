@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css"
+    />
 
-    <link rel="results stylesheet" type="text/css" href="./assets/results.css"/>
+    <link
+      rel="results stylesheet"
+      type="text/css"
+      href="./assets/results.css"
+    />
 
     <title>Your Results</title>
-</head>
+  </head>
 
-<body>
-    
+  <body>
     <header>
+
+      <span class="emoji monkey" role="img" aria-label="monkey"></span>
+      <h1>YOUR RESULTS!</h1>
+      <span class="emoji monkey" role="img" aria-label="monkey"></span>
+      <span class="emoji star-face" role="img"></span>
+      <span class="emoji food" role="img"></span>
+    </header>
+    <main>
+      <p>Based on your mood & food preference:</p>
+
 
         <span class="emoji monkey" role="img" aria-label="monkey"></span>
         <span class="emoji food" role="img"></span>
@@ -32,29 +51,23 @@
         Based on your mood & food preference:
     </p>
 
-<div class="recs">
-    <div class = moviePicks>
-        <!-- <div class="movie-placeholder">MOVIE RESULT PLACEHOLDER TEXT</div>
+
+      <div class="recs">
+        <div class="moviePicks">
+          <!-- <div class="movie-placeholder">MOVIE RESULT PLACEHOLDER TEXT</div>
         <button class="huge ui button">Movie Synopsis</button>
         <p class="synopsis"> This is the movie synopsis</p> -->
-    
-    </div>
-    <container class = foodPicks>
-        <div class="food-placeholder"> FOOD RESULT PLACEHOLDER TEXT</div>
-        <button class="huge ui button">Show me Options</button>
-        <p class="food-options"> this is the food options </p>
-    </container>
-</div>
- </main>
-
-
-
+        </div>
+        <container class="foodPicks">
+          <div class="food-placeholder">FOOD RESULT PLACEHOLDER TEXT</div>
+          <p class="food-options">this is the food options</p>
+        </container>
+      </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
 
-    <script src = "./assets/movie.js"></script>
+    <script src="./assets/movie.js"></script>
     <script src="./assets/results.js"></script>
-
-</body>
-
+  </body>
 </html>

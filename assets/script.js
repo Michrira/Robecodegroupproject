@@ -2,6 +2,15 @@
 var yelpApiKey = "ByTr1g12x5fWKcXeF8ifzkIZt_9MQb-76N6n-DxZyzx66ZudR53Z5Ez2TJ7MBktodnsmcVoiXqBdAing0k7BrGeJRA1yw4vTiwrofTx9m9k3clHgkhg3BV-IMsAcZHYx";
 var tmdbApiKey = "5d63f52510b97ed689fb70d1b4978c73";
 
+//restaurants API
+
+const options = {method: 'GET', headers: {accept: 'application/json'}};
+
+fetch('https://api.yelp.com/v3/businesses/search?categories=&categories=restaurants&sort_by=best_match&limit=20', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+
 var suggestionsContainer = document.querySelector("#suggestions-container");
 var moodBtns = document.querySelector("#mood-selection");
 // var moodButton = document.querySelector("#mood-button");

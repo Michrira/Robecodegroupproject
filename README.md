@@ -11,18 +11,27 @@ As full-stack bootcamp students, we built this project to showcase the skills we
 
 Our app, FLIX & Feasts, solves the problem of making the decision of what to eat and what to watch when all you know is you want dinner and a movie.  As a team, we commiserated with each other about how we've encountered the problem of not knowing what we want to eat and wasting time going back and forth but never really coming to a decision.  With FLIX & Feasts, it does the thinking for the user.  By choosing a mood, and answering a few randomly selected questions so the app understands what the user is feeling, food choice and movie choice is returned for a good night in.  Even if the user doesn't know how they feel, "I don't know," is also an option.  
 
-- What did you learn? 
-As we created this app, we learned.........
+As we created this app, we learned the importance of communication, collaboration, respect, and patience. In our group, we had a smooth sailing experience because we all embodied these things from thr start. There were many obstacles in the way but patience and collaboration allowed us to quickly and swiftly get over those obstacles. We also learned how to better read API documentation. All of our HTML, CSS, AND JavaScript skills improved tenfold.
 
 
 ## Usage
 
-Upon arrival to the FLIX & Feasts page, the user will see 
+When you are on the webpage for Flix & Feasts, the user will be prompted with several questions to gather information about their mood and food preferences. THe first question will be "What's your mood today?". The user is presented with 5 options and the user can click on any one of them. Once they click on their answer, several questions will pop up under the "What type of food are you feeling?" question. In the drop down bar, the user can answer yes, no, or I dont knowby clicking on the word. Once those questions are answered, the user will need to click on the button "get food suggestions". The user will be transported to a new page that will automatically show them their movie suggestions with that movie's synopsis and movie poster and with their food suggestion.
+If a user chooses a mood but does not answer the food questions, they will still be suggested a movie and food item. The user must choose a mood though.
+
+
+
+![alt text](/assets/Images/FLIX%26Feasts_1LandingPage.png)
 
 
 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![alt text](/assets/Images/FLIX%26Feasts_2Qs.png)
+
+ ![alt text](/assets/Images/FLIX%26Feasts_3ResultsMoviePage.png)
+
+
+
 
     ```md
     ![alt text](assets/images/screenshot.png)

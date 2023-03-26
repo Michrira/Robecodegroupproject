@@ -22,3 +22,5 @@ function displayRandomMovie() {
   movieResultEl.append(title, overview, poster);
 }
 displayRandomMovie();
+
+

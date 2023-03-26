@@ -17,9 +17,10 @@ As we created this app, we learned.........
 
 ## Usage
 
+Upon arrival to the FLIX & Feasts page, the user will see 
 
 
-Provide instructions and examples for use. Include screenshots as needed.
+
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
@@ -35,7 +36,7 @@ Shawn Tschoepe
 
 OMDB API
 
-FOOD API 
+Yelp API 
 
 Google Fonts
 

@@ -11,7 +11,11 @@ As full-stack bootcamp students, we built this project to showcase the skills we
 
 Our app, FLIX & Feasts, solves the problem of making the decision of what to eat and what to watch when all you know is you want dinner and a movie.  As a team, we commiserated with each other about how we've encountered the problem of not knowing what we want to eat and wasting time going back and forth but never really coming to a decision.  With FLIX & Feasts, it does the thinking for the user.  By choosing a mood, and answering a few randomly selected questions so the app understands what the user is feeling, food choice and movie choice is returned for a good night in.  Even if the user doesn't know how they feel, "I don't know," is also an option.  
 
-As we created this app, we learned the importance of communication, collaboration, respect, and patience. In our group, we had a smooth sailing experience because we all embodied these things from thr start. There were many obstacles in the way but patience and collaboration allowed us to quickly and swiftly get over those obstacles. We also learned how to better read API documentation. All of our HTML, CSS, AND JavaScript skills improved tenfold.  We also learned that with the Yelp API we called for our food options, we would need 
+As we created this app, we learned the importance of communication, collaboration, respect, and patience. In our group, we had a smooth sailing experience because we all embodied these things from thr start. There were many obstacles in the way but patience and collaboration allowed us to quickly and swiftly get over those obstacles. We also learned how to better read API documentation. All of our HTML, CSS, AND JavaScript skills improved tenfold.  We also learned that with the Yelp API we called for our food options, we would need daily authorization.  
+
+DEPLOYED WEBPAGE LINK: 
+https://michrira.github.io/Robecodegroupproject/
+https://github.com/Michrira/Robecodegroupproject.git
 
 
 ## Usage
@@ -37,7 +41,7 @@ If a user chooses a mood but does not answer the food questions, a movie and foo
 
 The RobeCoders group would like to give special thanks to our insructor Bryan Swarthout for all of his help with API fetching as well as his guidance and encouragement.  We'd also like to extend our gratitude to our TA Shawn Tschoepe for his advice and code refracting help. Additional thanks to web developer Ryan Fernandez for his guidance with getting our food API to work.  
 
-This application utilizes the OMDB API to pull our random movie selection.  The Yelp API is used to pull our random food selection.  Google Fonts was used to style the text on our webpage.   We also used JQuery in our JavaScript.  
+This application utilizes the TMDB API to pull our random movie selection.  The Yelp API is used to pull our random food selection.  Google Fonts was used to style the text on our webpage.   We also used JQuery in our JavaScript.  
 
 
 ## License

@@ -1,3 +1,4 @@
+// Selecting DOM elements
 var happyBtn = document.querySelector('#happy-btn');
 var sadBtn = document.querySelector('#sad-btn');
 var excitedBtn = document.querySelector('#excited-btn');
@@ -6,8 +7,7 @@ var idkBtn = document.querySelector('#idk-btn');
 var questionContainer = document.getElementById('food-container');
 var foodSuggestions = document.querySelector('#get-food-btn');
 
-var questions;
-
+// Movie genre arrays
 var happyArray = ['16', '35', '10751', '10770'];
 var sadArray = ['18', '14', '10402', '10749'];
 var excitedArray = ['28', '12', '53', '9648'];
@@ -34,23 +34,26 @@ var idkArray = [
   '37',
 ];
 
+// API request URL and related variables
 var randomItem = '';
 var genreURl = '';
-
 var requestURL =
   'https://api.themoviedb.org/3/discover/movie?api_key=7a5e1c0d82259f941772e1baf73aad08&with_original_language=en&with_genres=';
 
+// Available questions and current question variables for the food suggestions section
 var availableQuestions = {};
 var currentQuestion = {};
 var MAX_QUESTIONS = 2;
 
-// Shuffle function
+// Shuffle function to randomly display questions based on selected mood
 function shuffle(array) {
   questions = '';
+  // Loop through the movie genre arrays to display random questions based on selected mood
   for (var count = 0; count < MAX_QUESTIONS; count++) {
     randomItem = array[Math.floor(Math.random() * array.length)];
     displayRandomQuestion(randomItem);
   }
+  // Add HTML code for food selection options
   questionContainer.innerHTML =
     `<h2>Are you Vegan/ Vegetarian?</h2>
     <select id="food-selection">
@@ -60,6 +63,7 @@ function shuffle(array) {
     </select>
     ` + questions;
 }
+
 
 // Function to display a random question
 function displayRandomQuestion(question) {
@@ -73,11 +77,13 @@ function displayRandomQuestion(question) {
     `;
 }
 
+// Function to get a random movie from the given array
 function getRandomMovie(array) {
   randomItem = array[Math.floor(Math.random() * array.length)];
   genreURl = requestURL.concat(randomItem);
 }
 
+// Function to handle button click events
 function clickedButton(event) {
   event.preventDefault();
 
@@ -85,8 +91,10 @@ function clickedButton(event) {
   if (element.matches('button')) {
     var buttonType = element.getAttribute('id');
 
+    // Clear question container
     questionContainer.innerHTML = '';
 
+    // Determine which button was clicked and shuffle the corresponding array
     if (buttonType === 'happy-btn') {
       shuffle(questionsHappy);
       getRandomMovie(questionsHappy);
@@ -109,9 +117,11 @@ function clickedButton(event) {
     }
   }
 
+  // Call function to fetch the URL for a random movie based on the selected genre
   getMovieURl();
 }
 
+// Function to fetch the URL for a random movie based on the selected genre
 function getMovieURl() {
   fetch(genreURl)
     .then(function (response) {
@@ -129,6 +139,7 @@ function getMovieURl() {
     });
 }
 
+// Event listeners for button clicks and food suggestion clicks
 moodBtns.addEventListener('click', clickedButton);
 foodSuggestions.addEventListener(
   'click',

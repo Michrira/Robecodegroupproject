@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preconnect to Google Fonts API -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Load Poppins and Caveat fonts from Google Fonts API -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Loads CSS styles -->
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
 
     <title>FLIX & Feasts</title>
@@ -24,13 +27,16 @@
 
   <body>
     <header>
+      <!-- Main heading with an emoji and a custom font for "Feasts" -->
       <h1>🎬 FLIX &amp; <span class="feasts">Feasts</span> 🍿</h1>
       <p>Indecisive? Look no further!</p>
     </header>
 
     <div class="moodQs" id="question-container">
-
+        <!-- Heading for mood selection section -->
         <h2 id ="moodToday">What's your mood today?</h2>
+
+        <!-- Mood selection buttons -->
         <div id="mood-selection">
             <button id="happy-btn">happy 😄</button>
             <button id="sad-btn">sad 😔</button>
@@ -38,6 +44,7 @@
             <button id="angry-btn">angry 😡</button>
             <button id="idk-btn">idk 🙃</button>
         </div>
+
 
     </div>
 
@@ -64,10 +71,11 @@
     <div class="foodResults">
       <h2>Food suggestions</h2>
       <ul id="food-list"></ul>
+
     </div>
 
+    <!-- Load JavaScript libraries and scripts -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
     <script src="./assets/questions.js"></script>
     <script src="./assets/script.js"></script>
     <script src="./assets/movie.js"></script>

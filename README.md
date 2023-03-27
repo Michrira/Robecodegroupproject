@@ -28,16 +28,10 @@ Once they click on their answer, three questions will pop up under the "What typ
 The user will be transported to a new page that will display their results and automatically show them their movie suggestions with that movie's synopsis and movie poster as well as their food suggestion.
 If a user chooses a mood but does not answer the food questions, a movie and food item will still be suggested. The user must choose a mood to get a movie and food result.  
 
- ![alt text](/assets/Images/FLIX%26Feasts_3ResultsMoviePage.png)
-
-** INSERT FOOD RESULTS SCREENSHOT HERE**
-
-** INSERT FULL WEBPAGE PHOTOS HERE of index.html & results.html **
+![alt text](/assets/Images/MovieResults.png)
+![alt text](assets/Images/FoodResults.png)
 
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 

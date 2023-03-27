@@ -1,4 +1,4 @@
-// 32
+// 32 questions for IDK
 var questionsIdk = [
   {
     question: "Do you want something sweet?",
@@ -194,7 +194,7 @@ var questionsIdk = [
   },
 ];
 
-// 9
+// 9 questions for happy
 var questionsHappy = [
   {
     question: "Do you want something sweet?",
@@ -252,7 +252,7 @@ var questionsHappy = [
   },
 ];
 
-// 8
+// 8 questions for sad
 var questionsSad = [
   {
     question: "Would you like dessert?",
@@ -304,7 +304,7 @@ var questionsSad = [
   },
 ];
 
-// 9
+// 9 questions for angry
 var questionsAngry = [
   {
     question: "Do you want a hearty meal?",
@@ -362,7 +362,7 @@ var questionsAngry = [
   },
 ];
 
-// 8
+// 8 questions for excited
 var questionsExcited = [
   {
     question: "Do you want carbs?",

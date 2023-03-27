@@ -55,3 +55,4 @@ function displayResults() {
 
   displayRandomFood();
   displayResults();
+

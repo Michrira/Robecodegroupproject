@@ -55,15 +55,12 @@ h1 {
     border: 3px solid black;
     text-align: center;
     margin: auto;
-    color: black;
+    color: white;
     margin-top: 2%;
     }
     
     /* Style the p element */
     p {
-}
-.food-options {
-    font-size: 35px;
 }
 p {
     text-align: center;

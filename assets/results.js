@@ -22,11 +22,11 @@ function displayRandomMovie() {
   movieResultEl.append(title, overview, poster);
 }
 displayRandomMovie();
-function displayRandomFood(){
 
+function displayRandomFood() {
 fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=los%20angeles&term=restaurants&sort_by=best_match&limit=20', {
   headers: {
-    'authorization': 'Bearer ByTr1g12x5fWKcXeF8ifzkIZt_9MQb-76N6n-DxZyzx66ZudR53Z5Ez2TJ7MBktodnsmcVoiXqBdAing0k7BrGeJRA1yw4vTiwrofTx9m9k3clHgkhg3BV-IMsAcZHYx'
+    'authorization': 'Bearer qiVkS2AtN-9RfaGsoAkYDuGbU670y4KSsS-7S8FGrgu3Vq1aqXFWkDiOsN3zdoZHWTei9BkR3sOB2mVJvz-zPJcdqJ1YXXmvINS3Zd-aULBDROgRZ55M1CdMsuUgZHYx'
   }
 })
 .then(function(response) {
@@ -34,18 +34,24 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/se
 })
 .then(function(data) {
   console.log(data);
+  var randomFood = data.businesses[Math.floor(Math.random() *19)]; 
+  /* console.log("***",randomFood); */
+  localStorage.setItem("random-food", JSON.stringify(randomFood));
   var food = document.getElementById("food-options");
   // code to display the retrieved data
 });
 }
-function displayRandomFood() {
+function displayResults() {
   var randomFood = JSON.parse(localStorage.getItem('random-food'));
   console.log(randomFood);
   var businesses = document.createElement('h4');
-
-  var foodResultEl = document.querySelector('.randomFood');
-  businesses.textContent=randomFood.businesses.name;
+  var businessImage = document.createElement('img');
+  var foodResultEl = document.querySelector('.food-options');
+  businesses.textContent=randomFood.name;
+  businessImage.setAttribute('src',randomFood.image_url); 
   foodResultEl.append(businesses);
+  foodResultEl.append(businessImage);
   }
 
   displayRandomFood();
+  displayResults();

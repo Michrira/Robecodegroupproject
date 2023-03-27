@@ -28,7 +28,7 @@ function onMoodButtonClick() {
         getMovieSuggestions("idk");
     });
 
-    // Call the TMDB API to get movie suggestions
+  // Call the TMDB API to get movie suggestions
     var genreId = "10751"; // Replace this with the ID of the genre you want to search for
     fetch(
         `https://api.themoviedb.org/3/discover/movie?api_key=${tmdbApiKey}&with_genres=${genreId}`
@@ -46,23 +46,5 @@ function onMoodButtonClick() {
         })
         .catch((error) => {
             console.error(error);
-        });
-}
-
-var foodURL=`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=los%20angeles&term=restaurants&sort_by=best_match&limit=20`
-function getFoodURl() {
-    fetch(foodURL)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-            var foodArray = data.businesses;
-            // console.log(foodArray);
-            var randomFood =
-                foodArray[Math.floor(Math.random() * foodArray.length)];
-            localStorage.setItem("random-food", JSON.stringify(randomFood));
-            // where to put items
-            // how to put IN results html
         });
 }

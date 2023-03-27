@@ -37,7 +37,7 @@ If a user chooses a mood but does not answer the food questions, a movie and foo
 
 The RobeCoders group would like to give special thanks to our insructor Bryan Swarthout for all of his help with API fetching as well as his guidance and encouragement.  We'd also like to extend our gratitude to our TA Shawn Tschoepe for his advice and code refracting help. Additional thanks to web developer Ryan Fernandez for his guidance with getting our food API to work.  
 
-This application utilizes the OMDB API to pull our random movie selection.  The Yelp API is used to pull our random food selection.  Google Fonts was used to style the text on our webpage.   We also used JQuery in our JavaScript.  
+This application utilizes the TMDB API to pull our random movie selection.  The Yelp API is used to pull our random food selection.  Google Fonts was used to style the text on our webpage.   We also used JQuery in our JavaScript.  
 
 
 ## License

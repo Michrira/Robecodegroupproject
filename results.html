@@ -1,31 +1,23 @@
+<!-- Specify that this is an HTML5 document -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Metadata about the page -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Links to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css"
-    />
-
-    <link
-      rel="results stylesheet"
-      type="text/css"
-      href="./assets/results.css"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css" />
+    <link rel="results stylesheet" type="text/css" href="./assets/results.css" />
+    <!-- Set the title of the page -->
     <title>Your Results</title>
   </head>
 
   <body>
+    <!-- The header section of the page -->
     <header>
       <span class="emoji monkey" role="img" aria-label="monkey"></span>
       <span class="emoji star-face" role="img"></span>
@@ -34,25 +26,33 @@
       <span class="emoji monkey" role="img" aria-label="monkey"></span>
     </header>
 
+    <!-- The main content of the page -->
     <main>
+      <!-- A paragraph to introduce the recommendations -->
       <p class="based-on">Based on your mood & food preference:</p>
 
+      <!-- The recommendations section of the page -->
       <div class="recs">
+        <!-- Placeholder for movie recommendations -->
         <div class="moviePicks">
           <!-- <div class="movie-placeholder">MOVIE RESULT PLACEHOLDER TEXT</div>
         <button class="huge ui button">Movie Synopsis</button>
         <p class="synopsis"> This is the movie synopsis</p> -->
         </div>
+
+        <!-- Container for food recommendations -->
         <container class="foodPicks">
-          <div class="food-placeholder">FOOD RESULT PLACEHOLDER TEXT</div>
-          <p class="food-options">this is the food options</p>
+          <div class="food-placeholder"> <div id="randomFood"></div></div>
+          <p class="food-options">Food options:</p>
         </container>
       </div>
     </main>
 
+    <!-- Load the Semantic UI library -->
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
-
+    <!-- Load custom JavaScript files -->
     <script src="./assets/movie.js"></script>
     <script src="./assets/results.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>

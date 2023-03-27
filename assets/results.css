@@ -55,7 +55,7 @@ h1 {
     border: 3px solid black;
     text-align: center;
     margin: auto;
-    color: white;
+    color: black;
     margin-top: 2%;
     }
     
@@ -64,11 +64,17 @@ h1 {
 }
 p {
     text-align: center;
+
+    font-size: 25px;
+}
+h3 {
+
     font-size: 20px;
     }
     
     /* Style the h3 element */
     h3 {
+
     font-size: 35px;
     text-decoration: underline;
     font-weight: bold;

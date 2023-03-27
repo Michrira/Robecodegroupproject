@@ -31,6 +31,10 @@ function displayRandomMovie() {
   movieResultEl.append(title, overview, poster);
 }
 
+displayRandomMovie();
+
+function displayRandomFood() {
+
 // function to display random food suggestions
 function displayRandomFood() {
   // use fetch to get data from Yelp API
@@ -44,6 +48,15 @@ function displayRandomFood() {
   })
   .then(function(data) {
     console.log(data);
+
+    var businesses = data.businesses;
+    var randomBusinesses = [];
+    for (var i = 0; i < 3; i++) {
+      var randomIndex = Math.floor(Math.random() * businesses.length);
+      randomBusinesses.push(businesses[randomIndex]);
+      businesses.splice(randomIndex, 1);
+    }
+
     // get an array of businesses from the Yelp data
     var businesses = data.businesses;
     // create an array for randomly selected businesses
@@ -58,9 +71,28 @@ function displayRandomFood() {
       businesses.splice(randomIndex, 1);
     }
     // store the randomly selected businesses in local storage as a JSON string
+  main
     localStorage.setItem("random-businesses", JSON.stringify(randomBusinesses));
   });
 }
+
+function displayResults() {
+  var randomBusinesses = JSON.parse(localStorage.getItem('random-businesses'));
+  console.log(randomBusinesses);
+  var foodResultEl = document.querySelector('.food-options');
+  for (var i = 0; i < randomBusinesses.length; i++) {
+    var business = randomBusinesses[i];
+    var businesses = document.createElement('h4');
+    var businessImage = document.createElement('img');
+    businesses.textContent = business.name;
+    businessImage.setAttribute('src', business.image_url); 
+    foodResultEl.append(businesses);
+    foodResultEl.append(businessImage);
+  }
+}
+
+displayRandomFood();
+displayResults();
 
 // function to display the random food suggestions
 function displayResults() {

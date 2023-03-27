@@ -16,6 +16,7 @@ body {
     justify-content: center;
     }
     
+
     /* Style the h1 element */
     h1 {
     font-size: 30px;
@@ -23,6 +24,13 @@ body {
     
     /* Style the based-on class */
     .based-on {
+
+
+}
+h1 {
+    font-size: 35px;
+}
+.based-on {
     text-align: center;
     font-size: 35px;
     }
@@ -47,12 +55,17 @@ body {
     border: 3px solid black;
     text-align: center;
     margin: auto;
-    color: white;
+    color: black;
     margin-top: 2%;
     }
     
     /* Style the p element */
     p {
+}
+.food-options {
+    font-size: 35px;
+}
+p {
     text-align: center;
     font-size: 20px;
     }

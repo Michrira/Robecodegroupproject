@@ -41,9 +41,12 @@ h1 {
     border: 3px solid black;
     text-align: center;
     margin: auto;
-    color: white;
+    color: black;
     margin-top: 2%;
     
+}
+.food-options {
+    font-size: 35px;
 }
 p {
     text-align: center;

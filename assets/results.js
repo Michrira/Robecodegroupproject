@@ -60,5 +60,9 @@ function displayResults() {
   }
 }
 
+
 displayRandomFood();
 displayResults();
+
+
+
